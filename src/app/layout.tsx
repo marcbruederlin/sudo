@@ -10,7 +10,8 @@ const fontSans = FontSans({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
   title: 'SUDO',
-  description: 'Sudo is a minimalistic portfolio template for photographers, design studios and creative people.',
+  description:
+    'Sudo is a minimalistic portfolio template for photographers, design studios and creative people.',
 }
 
 type RootLayoutProps = Readonly<{
@@ -20,13 +21,18 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={cn('font-sans antialiased text-foreground bg-background dark:bg-foreground dark:text-background scroll-smooth', fontSans.className)}>
-        <div className='max-w-[1360px] px-10 mx-auto'>
+      <body
+        className={cn(
+          'scroll-smooth bg-background font-sans text-foreground antialiased dark:bg-foreground dark:text-background',
+          fontSans.className,
+        )}
+      >
+        <div className="mx-auto max-w-[1360px] px-10">
           <Header />
           {children}
           <Footer />
         </div>
-        </body>
+      </body>
     </html>
   )
 }

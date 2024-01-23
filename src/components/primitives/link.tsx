@@ -6,5 +6,12 @@ import { cn } from '@/lib/utils'
 type LinkProps = NextLinkProps & ComponentPropsWithRef<'a'>
 
 export function Link({ children, className, ...props }: LinkProps) {
-    return <NextLink className={cn('font-semibold underline underline-offset-8', className)} {...props}>{children}</NextLink>
+  return (
+    <NextLink
+      className={cn('font-semibold underline underline-offset-8', className)}
+      {...props}
+    >
+      {children}
+    </NextLink>
+  )
 }
