@@ -1,113 +1,54 @@
-import Image from "next/image";
+import { Heading } from '@/components/primitives/heading'
+import { Image } from '@/components/primitives/image'
+import { Link } from '@/components/primitives/link'
+import { P } from '@/components/primitives/paragraph'
+import { ThreeColumns } from '@/components/three-columns'
+import { TwoColumns } from '@/components/two-columns'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col space-y-36">
+      <section className='flex flex-col space-y-8'>
+        <P className='max-w-2xl'>Located in the heart of Los Angeles, our studio is surrounded by the city's diverse and dynamic culture, providing endless opportunities for inspiration and creativity. We invite you to explore our portfolio and see for yourself the caliber of work we produce. Contact us today to learn more about our videography services and how we can help bring your vision to life.</P>
+        <Link href="mailto:sudo@example.com">sudo@example.com</Link>
+      </section>
+
+      <Image width={1360} height={750} src="/images/ts2h4XcIrdo.webp" alt="An old Porsche driving on a sandy road" />
+
+      <P>
+        We understand the importance of storytelling and strive to create compelling narratives that resonate with our clients and their audiences. Whether you're looking to capture a wedding, promote your brand, or produce a creative project, our team is here to collaborate with you every step of the way.
+      </P>
+
+      <TwoColumns left={
+        <Image width={656} height={750} src="/images/GpJxmjgN0DI.webp" alt="An offroad buggy drives along a sand dune" />
+      } right={
+        <Image width={656} height={750} src="/images/xPEGf7Jy0jY.webp" alt="A man stands in front of an offroad buggy in the desert" />
+      } />
+
+      <TwoColumns className='items-center' left={
+        <Image width={656} height={650} src="/images/GpJxmjgN0DI.webp" alt="An offroad buggy drives along a sand dune" />
+      } right={
+        <div className='flex flex-col gap-10'>
+          <div className='flex flex-col gap-12'>
+            <Heading>The story behind our videography studio</Heading>
+            <P>Our goal is to create visually stunning and emotionally compelling cinematic experiences for our clients through the art of photography and videography. We are passionate about storytelling and bringing our clients' visions to life through creative talents and expertise.</P>
+          </div>
+          <P>By utilizing the latest technology and equipment, SUDO. is committed to delivering high-quality work that exceeds expectations and leaves a lasting impression on our clients and their audiences. Ultimately, our mission is to create meaningful and unforgettable cinematic moments that capture the essence of our clients' stories and help them to connect with their viewers on a deeper level.</P>
         </div>
-      </div>
+      } />
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <ThreeColumns left={
+        <Image width={421} height={750} src="/images/GpJxmjgN0DI.webp" alt="An offroad buggy drives along a sand dune" />
+      } middle={
+        <Image width={421} height={750} src="/images/xPEGf7Jy0jY.webp" alt="A man stands in front of an offroad buggy in the desert" />
+      } right={
+        <Image width={421} height={750} src="/images/xPEGf7Jy0jY.webp" alt="A man stands in front of an offroad buggy in the desert" />
+      } />
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className='flex flex-col space-y-10'>
+        <P>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</P>
+        <P>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</P>
+      </section>
     </main>
-  );
+  )
 }
