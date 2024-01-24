@@ -1,7 +1,27 @@
-import { ComponentProps } from 'react'
+import { cn } from '@/lib/utils'
+import { cva, type VariantProps } from 'class-variance-authority'
+import { type ComponentProps } from 'react'
 
-type ParagraphProps = ComponentProps<'p'> & {}
+type ParagraphProps = ComponentProps<'p'> &
+  VariantProps<typeof paragraphVariants>
 
-export function P({ children, ...props }: ParagraphProps) {
-  return <p {...props}>{children}</p>
+const paragraphVariants = cva('max-w-[1008px]', {
+  variants: {
+    size: {
+      default: 'text-lg',
+      sm: 'text-sm leading-normal',
+      lg: 'text-xl leading-normal',
+    },
+  },
+  defaultVariants: {
+    size: 'default',
+  },
+})
+
+export function P({ size, className, children, ...props }: ParagraphProps) {
+  return (
+    <p className={cn(paragraphVariants({ size, className }))} {...props}>
+      {children}
+    </p>
+  )
 }

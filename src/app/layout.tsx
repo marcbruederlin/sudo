@@ -24,10 +24,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           'scroll-smooth bg-background font-sans text-foreground antialiased dark:bg-foreground dark:text-background',
-          fontSans.className,
+          fontSans.variable,
         )}
       >
-        <div className="mx-auto max-w-[1360px] px-10">
+        <div className="mx-auto max-w-[1360px] px-4 md:px-10">
           <Header />
           {children}
           <Footer />

@@ -1,15 +1,15 @@
+import { ThreeColumns } from '@/components/layout/three-columns'
+import { TwoColumns } from '@/components/layout/two-columns'
 import { Heading } from '@/components/primitives/heading'
 import { Image } from '@/components/primitives/image'
 import { Link } from '@/components/primitives/link'
 import { P } from '@/components/primitives/paragraph'
-import { ThreeColumns } from '@/components/three-columns'
-import { TwoColumns } from '@/components/two-columns'
 
 export default function Home() {
   return (
     <main className="flex flex-col space-y-36">
       <section className="flex flex-col space-y-8">
-        <P className="max-w-2xl">
+        <P size="lg">
           Located in the heart of Los Angeles, our studio is surrounded by the
           city's diverse and dynamic culture, providing endless opportunities
           for inspiration and creativity. We invite you to explore our portfolio
@@ -17,7 +17,9 @@ export default function Home() {
           to learn more about our videography services and how we can help bring
           your vision to life.
         </P>
-        <Link href="mailto:sudo@example.com">sudo@example.com</Link>
+        <Link size="lg" href="mailto:sudo@example.com">
+          sudo@example.com
+        </Link>
       </section>
 
       <Image
@@ -27,7 +29,7 @@ export default function Home() {
         alt="An old Porsche driving on a sandy road"
       />
 
-      <P>
+      <P size="lg">
         We understand the importance of storytelling and strive to create
         compelling narratives that resonate with our clients and their
         audiences. Whether you're looking to capture a wedding, promote your
@@ -67,7 +69,7 @@ export default function Home() {
         right={
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-12">
-              <Heading>The story behind our videography studio</Heading>
+              <Heading as="h1">The story behind our videography studio</Heading>
               <P>
                 Our goal is to create visually stunning and emotionally
                 compelling cinematic experiences for our clients through the art
@@ -85,6 +87,8 @@ export default function Home() {
               our clients' stories and help them to connect with their viewers
               on a deeper level.
             </P>
+
+            <Link href="#">Learn more</Link>
           </div>
         }
       />

@@ -1,7 +1,9 @@
-import { ComponentProps } from 'react'
+import { type ComponentProps, type ElementType } from 'react'
 
-type HeadingProps = ComponentProps<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'>
+type HeadingProps = ComponentProps<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'> & {
+  as: ElementType
+}
 
-export function Heading({ children }: HeadingProps) {
-  return <h1>{children}</h1>
+export function Heading({ as: Cmp, children }: HeadingProps) {
+  return <Cmp>{children}</Cmp>
 }
