@@ -22,3 +22,6 @@ cd sudo
 bun install
 bun dev
 ```
+
+<h2>Credits</h2>
+<p>The photos used in the design are from <a target="_blank" href="https://unsplash.com/de/@spencerdavis">Spencer Davis</a>.</p>
