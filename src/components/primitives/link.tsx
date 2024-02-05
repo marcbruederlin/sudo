@@ -8,18 +8,21 @@ type LinkProps = NextLinkProps &
   ComponentPropsWithRef<'a'> &
   VariantProps<typeof linkVariants>
 
-const linkVariants = cva('font-semibold underline underline-offset-8', {
-  variants: {
-    size: {
-      default: 'text-lg',
-      sm: 'h-9 px-3 rounded-md',
-      lg: 'text-xl leading-normal',
+const linkVariants = cva(
+  'font-semibold underline underline-offset-8 hover:opacity-50 transition-all',
+  {
+    variants: {
+      size: {
+        default: 'text-lg',
+        sm: 'h-9 px-3 rounded-md',
+        lg: 'text-xl leading-normal',
+      },
+    },
+    defaultVariants: {
+      size: 'default',
     },
   },
-  defaultVariants: {
-    size: 'default',
-  },
-})
+)
 
 export function Link({ size, children, className, ...props }: LinkProps) {
   return (
