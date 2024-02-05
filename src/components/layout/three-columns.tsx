@@ -14,7 +14,12 @@ export function ThreeColumns({
   className,
 }: ThreeColumnsProps) {
   return (
-    <div className={cn('grid grid-cols-3 gap-12', className)}>
+    <div
+      className={cn(
+        'grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-12',
+        className,
+      )}
+    >
       {left && left}
       {middle && middle}
       {right && right}

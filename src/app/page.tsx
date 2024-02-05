@@ -7,7 +7,7 @@ import { P } from '@/components/primitives/paragraph'
 
 export default function Home() {
   return (
-    <main className="flex flex-col space-y-36">
+    <main className="flex flex-col space-y-20 md:space-y-36">
       <section className="flex flex-col space-y-8">
         <P size="lg">
           Located in the heart of Los Angeles, our studio is surrounded by the

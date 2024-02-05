@@ -8,7 +8,12 @@ type TwoColumnsProps = ComponentProps<'div'> & {
 
 export function TwoColumns({ left, right, className }: TwoColumnsProps) {
   return (
-    <div className={cn('grid grid-cols-2 gap-12', className)}>
+    <div
+      className={cn(
+        'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12',
+        className,
+      )}
+    >
       {left && left}
       {right && right}
     </div>
